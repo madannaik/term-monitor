@@ -13,26 +13,43 @@
       0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 
     &--item {
-
       margin: 2rem 0 0 2rem;
-
-      &--image {
-        width: 40px !important;
-        height: 40px !important;
+      cursor: pointer;
+      .heading--image{
+        width: 1rem;
+        height: 1rem;
       }
+      // &--image {
+      //   width: 40px !important;
+      //   height: 40px !important;
+      // }
       h1 {
         font-size: 1.6rem;
         font-weight: 500;
         display: inline-block;
         text-align: center;
         padding-top: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1.8rem;
         vertical-align: text-bottom;
+      }
+
+      @media (min-width:1440px){
+        margin: 1.5rem 0 0 1.5rem;
+        h1 {
+          margin-bottom: 1.4rem;
+        }
+      }
+      @media (min-width:1680px){
+        margin: 1.5rem 0 0 1.5rem;
+        h1 {
+          margin-bottom: 1rem;
+        }
       }
     }
     &--items {
       height: 5rem;
       @include displayFloatImage;
+      cursor: pointer;
       img {
         filter: brightness(35%);
       }
@@ -56,6 +73,7 @@
       }
     }
     &--items-more {
+      cursor: pointer;
       height: 5rem;
       @include displayFloatImage;
       margin: 0 1.5rem 0 0;

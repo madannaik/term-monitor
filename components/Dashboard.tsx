@@ -9,12 +9,10 @@ const Dashboard = () => {
         <h1>KEYWORDS</h1>
         <div className="input-submit">
           <input name="submit" id="submit" />
-
           <label htmlFor="submit" className="input-label">
             submit &rarr;
           </label>
         </div>
-
         <span>
           <h1>A</h1>
         </span>

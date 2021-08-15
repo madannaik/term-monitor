@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import icon from "../public/icon.svg";
+import star from "../public/star.svg";
 import { options } from "../utils/constants";
 import Dashboard from "./Dashboard";
 
@@ -11,7 +12,7 @@ export default function MainPage() {
     <div className="section">
       <div className="section__navbar">
         <div className="section__navbar--item ">
-          <Image src={icon} className="heading--image" />
+          <Image src={icon} className="heading--image" width="40" />
           <h1>TermMonitor</h1>
         </div>
         {options.map((data) => {
@@ -29,14 +30,14 @@ export default function MainPage() {
           onClick={() => setstate(!state)}
         >
           <div>
-            <Image src={options[0].image} alt={"add-icon"} />
+            <Image src={options[3].image} alt={"add-icon"} />
           </div>
-          <h1>{"More"}</h1>
+          <h1>{"Settings"}</h1>
         </div>
         <div
           className="section__navbar--items hidden"
           style={{
-            height: `${state ? "0" : "5rem"}`,
+            height: `${state ? "5rem" : "0"}`,
             
           }}
         >
