@@ -1,0 +1,106 @@
+@import "../abstracts/mixins";
+
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  &__navbar {
+    flex-basis: 17vw;
+    // position: fixed;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+
+    &--item {
+
+      margin: 2rem 0 0 2rem;
+
+      &--image {
+        width: 40px !important;
+        height: 40px !important;
+      }
+      h1 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        display: inline-block;
+        text-align: center;
+        padding-top: 0;
+        margin-bottom: 2rem;
+        vertical-align: text-bottom;
+      }
+    }
+    &--items {
+      height: 5rem;
+      @include displayFloatImage;
+      img {
+        filter: brightness(35%);
+      }
+      h1 {
+        padding-top: 1.5rem;
+        font-size: 1.4rem;
+        text-align: start;
+        vertical-align: text-top;
+        color: rgba(0, 0, 0, 0.54);
+        font-weight: 400;
+      }
+
+      &:hover {
+        background-color: #3f0e40;
+        img {
+          filter: brightness(100%);
+        }
+        h1 {
+          color: white;
+        }
+      }
+    }
+    &--items-more {
+      height: 5rem;
+      @include displayFloatImage;
+      margin: 0 1.5rem 0 0;
+      background-image: url(../../images/Vector.svg);
+      background-repeat: no-repeat;
+    }
+    .more-settings{
+      position: relative;
+      &::after{
+        content: url(../../images/Vector5.svg);
+        position: absolute;
+        // background-color: #3f0e40;
+        width: 2rem;
+        height: 3rem;
+        top: 45%;
+        right: 0;
+        filter: brightness(100%);
+      }
+
+      &:hover::after{
+        filter: brightness(35%);
+      }
+    }
+    .hidden{
+      overflow: hidden;
+      transition: all .3s;
+      padding-left: 2rem;
+
+      h1{
+        // background-color: aqua;
+        padding-top: .5rem;
+        text-align: start;
+        vertical-align: text-bottom;
+        padding-bottom: 3rem;
+      }
+    }
+  }
+  
+
+  &__dashboard {
+
+    flex-basis: 83vw;
+    height: 100vh;
+    background-color: #e5e5e5;
+    overflow-y: scroll;
+  }
+ 
+}
